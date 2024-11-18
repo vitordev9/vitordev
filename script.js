@@ -2,11 +2,12 @@ document.addEventListener("DOMContentLoaded", function () {
     initVisitCounter();
 });
 
+
 /**
  * Função para inicializar e atualizar o contador de visitas.
  */
 function initVisitCounter() {
-    const navbar = document.querySelector('#navbar-links');
+    const navbar = document.getElementById('navbar-links');
     const visitCountElement = document.getElementById('visitCount');
 
     // Previne o menu de contexto e o evento de drag na navbar
@@ -25,10 +26,6 @@ function preventRightClickAndDrag(navbar) {
     });
 
     navbar.addEventListener('dragstart', function (event) {
-        event.preventDefault();
-    });
-
-    navbar.addEventListener('interactions', function (event) {
         event.preventDefault();
     });
 }
